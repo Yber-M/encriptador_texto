@@ -5,26 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Asegúrate de enlazar correctamente tu CSS -->
 </head>
 
 <body>
     <header class="header">
         <img src="img/Logo.svg" alt="logo-aluralatam">
+        <h1>Encriptador de Texto</h1>
     </header>
     <main class="encriptador">
-        <h1>Encriptador de Texto</h1>
         <section class="encriptador__input">
+            
             <div class="encriptador__input__caja">
-                <input type="text" name="caja_input" id="caja_input" placeholder="Ingrese el texto aquí">
+                <textarea name="cajaInput" id="cajaInput" placeholder="Ingrese el texto aquí" cols="50"></textarea>
             </div>
             <div class="encriptador__input__info">
                 <img src="img/bi_exclamation-circle-fill.png" alt="icon-info">
                 <span>Solo letras minúsculas y sin acentos</span>
             </div>
             <div class="encriptador__input__botones">
-                <input type="button" value="Encriptar" name="btnEncriptar" id="btnEncriptar">
-                <input type="button" value="Desencriptar" name="btnDesencriptar" id="btnDesencriptar">
+                <input type="button" value="Encriptar" id="btnEncriptar" onclick="encriptarTexto();">
+                <input type="button" value="Desencriptar" id="btnDesencriptar" onclick="desencriptarTexto();">
             </div>
+            <span class="encriptador__output__copy">Texto copiado en el portapapeles</span> 
+
         </section>
         <section class="encriptador__output">
             <div class="encriptador__output__hidden">
@@ -32,17 +36,18 @@
                 <h3>Ningún mensaje fue encontrado</h3>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            <div class="encriptador__output__caja">
-                <input type="text" name="caja_output" id="caja_output">
-                <input type="button" value="Copiar">
+            <div class="encriptador__output__caja" style="display: none;">
+                <textarea name="cajaOutput" id="cajaOutput"></textarea>
+                <span id="mensajeAccion"></span>
+                <input type="button" value="Copiar" onclick="copiarText();">
             </div>
         </section>
     </main>
     <footer>
         <p>Desarrollado por Yb.M - 2024</p>
     </footer>
-    
-    <script src="js/script.js"></script>
+
+    <script src="js/script.js"></script> <!-- Asegúrate de enlazar correctamente tu JS -->
 </body>
 
 </html>
