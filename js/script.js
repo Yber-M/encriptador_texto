@@ -6,15 +6,20 @@ let textCopy;
 function encriptarTexto() {
     document.getElementById('mensajeAccion').innerHTML = "Texto Encriptado";
     msjEntrada = document.getElementById('cajaInput').value;
-    textIncriptado = msjEntrada
+
+    if (!validarTexto(msjEntrada)) {
+        alert("Por favor, ingrese solo letras minúsculas y sin acentos.");
+    } else {
+        textIncriptado = msjEntrada
         .replace(/e/g, "enter")
         .replace(/i/g, "imes")
         .replace(/a/g, "ai")
         .replace(/o/g, "ober")
         .replace(/u/g, "ufat");
-
-    document.getElementById('cajaOutput').value = textIncriptado;
-    mostrarResultados();
+        
+        document.getElementById('cajaOutput').value = textIncriptado;
+        mostrarResultados();
+    }
 }
 
 function desencriptarTexto() {
@@ -29,6 +34,11 @@ function desencriptarTexto() {
     
     document.getElementById('cajaOutput').value = textDesencriptado;
     mostrarResultados();
+}
+
+function validarTexto(texto) {
+    const regex = /^[a-z\s]+$/;
+    return regex.test(texto);
 }
 
 function mostrarResultados() {
