@@ -55,7 +55,7 @@ function copiarText() {
         // Ocultar el mensaje después de 2 segundos
         setTimeout(() => {
             mensaje.classList.remove('show');
-        }, 1500);
+        }, 2000);
         estrcturaInicial();
     }).catch(error => {
         console.log('Error al copiar texto', error);

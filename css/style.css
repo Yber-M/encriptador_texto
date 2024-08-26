@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* General Reset */
 * {
@@ -69,6 +70,7 @@ body {
     font-size: 1rem;
     background-color: #2c313a;
     color: #ffffff;
+    font-family: "Source Code Pro", monospace;
     margin-bottom: 1rem;
     flex-grow: 1;
 }
@@ -152,6 +154,7 @@ body {
     color: #61dafb;
     font-size: 1rem;
     margin-top: 1rem;
+    font-weight: 900;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -163,10 +166,11 @@ body {
 }
 
 .encriptador__output__caja span {
-    color: #21a1f1;
+    color: #61dafb;
     font-weight: 900;
     font-family: 'Mukta';
 }
+
 /* Footer Style */
 footer {
     background-color: #20232a;
@@ -175,4 +179,81 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+/* Estilos generales para tablets */
+@media screen and (min-width: 600px) and (max-width: 1174px) {
+    body {
+        font-size: 2rem;
+    }
+
+    .header img {
+        width: 200px;
+        margin-right: -50px;
+    }
+
+    .encriptador {
+        padding: 3rem;
+        margin: 6rem;
+        max-width: 90%;
+        flex-direction: column;
+        /* Cambia la dirección a columna en pantallas más estrechas */
+        align-items: center;
+    }
+
+    .encriptador__input span {
+        font-size: 2rem;
+        margin-top: 1rem;
+        padding-bottom: -2rem;
+    }
+
+    .encriptador__input__info {
+        margin-bottom: 2rem;
+    }
+    
+    .encriptador__input__info img {
+        width: 48px;
+    }
+
+    .encriptador__input__info span{
+        font-size: 2rem;
+    }
+
+    .encriptador__input,
+    .encriptador__output {
+        width: 100%;
+        align-items: center;
+    }
+
+    .encriptador__output__caja,
+    .encriptador__input__caja {
+        width: 100%;
+    }
+
+    .encriptador__input__caja textarea,
+    .encriptador__output__caja textarea {
+        font-size: 2rem;
+    }
+
+    .encriptador__input__botones input[type="button"],
+    .encriptador__output__caja input[type="button"] {
+        font-size: 2rem;
+    }
+
+    .encriptador__output__hidden {
+        margin-bottom: 5rem;
+
+    }
+
+    .encriptador__output__hidden img {
+        margin-top: -4rem;
+    }
+
+    #mensajeAccion {
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 2.5rem;
+    }
 }
