@@ -266,7 +266,7 @@ footer {
 
     .encriptador {
         max-width: 90%;
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         flex-direction: column;
     }
 
@@ -298,13 +298,13 @@ footer {
     }
 
     .encriptador__output__hidden img {
-        margin-top: -7.8rem;
+        margin-top: -6rem;
         height: 150px;
         width: 150px;
     }
 
     .encriptador__output__hidden p {
-        margin-bottom: -1rem;
+        margin-bottom: -2rem;
     }
 
     .encriptador__input__info span{
