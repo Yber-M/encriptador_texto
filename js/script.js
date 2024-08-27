@@ -70,8 +70,7 @@ function copiarText() {
     navigator.clipboard.writeText(textCopy).then(() => {
         const mensaje = document.querySelector('.encriptador__output__copy');
         mensaje.classList.add('show');
-
-        // Ocultar el mensaje después de 2 segundos
+        
         setTimeout(() => {
             mensaje.classList.remove('show');
         }, 2000);

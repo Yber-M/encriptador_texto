@@ -14,9 +14,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video cubra todo el fondo */
-    z-index: -1; /* Envía el video al fondo, detrás del contenido */
-    filter: brightness(50%); /* Opcional: oscurece el video para mejorar la legibilidad del texto */
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -220,7 +220,6 @@ footer {
         margin: 6rem;
         max-width: 90%;
         flex-direction: column;
-        /* Cambia la dirección a columna en pantallas más estrechas */
         align-items: center;
     }
 
@@ -306,13 +305,13 @@ footer {
 
     .encriptador__input__botones,
     .encriptador__output__caja {
-        width: 100%; /* Asegura que los botones ocupen todo el ancho */
+        width: 100%;
     }
     .encriptador__output__caja input[type="button"] {
         margin-bottom: -3rem;
     }
     .encriptador__input__botones input[type="button"] {
-        font-size: 0.9rem; /* Ajusta el tamaño del texto en los botones */
+        font-size: 0.9rem;
         padding: 0.5rem;
     }
     .encriptador__input__caja textarea {
