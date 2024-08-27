@@ -298,7 +298,13 @@ footer {
     }
 
     .encriptador__output__hidden img {
-        margin-top: -6rem;
+        margin-top: -7.8rem;
+        height: 150px;
+        width: 150px;
+    }
+
+    .encriptador__output__hidden p {
+        margin-bottom: -1rem;
     }
 
     .encriptador__input__info span{
