@@ -288,9 +288,12 @@ footer {
         font-size: 0.9rem; /* Ajusta el tamaño del texto en los botones */
         padding: 0.5rem;
     }
-
+    .encriptador__input__caja textarea {
+        height: 70%;
+    }
     .encriptador__output__caja textarea {
         width: 100%;
+        height: 60%;
         margin-top: -42px;
     }
 
