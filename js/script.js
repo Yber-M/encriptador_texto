@@ -6,17 +6,24 @@ let textCopy;
 function encriptarTexto() {
     document.getElementById('mensajeAccion').innerHTML = "Texto Encriptado";
     msjEntrada = document.getElementById('cajaInput').value;
+    const infoSpan = document.querySelector('.encriptador__input__info span');
 
     if (!validarTexto(msjEntrada)) {
-        alert("Por favor, ingrese solo letras minúsculas y sin acentos.");
+        infoSpan.classList.add('error');
+        setTimeout(() => {
+            infoSpan.classList.remove('error');
+        }, 3000);
+
+        return;
+
     } else {
         textIncriptado = msjEntrada
-        .replace(/e/g, "enter")
-        .replace(/i/g, "imes")
-        .replace(/a/g, "ai")
-        .replace(/o/g, "ober")
-        .replace(/u/g, "ufat");
-        
+            .replace(/e/g, "enter")
+            .replace(/i/g, "imes")
+            .replace(/a/g, "ai")
+            .replace(/o/g, "ober")
+            .replace(/u/g, "ufat");
+
         document.getElementById('cajaOutput').value = textIncriptado;
         mostrarResultados();
     }
@@ -25,15 +32,27 @@ function encriptarTexto() {
 function desencriptarTexto() {
     document.getElementById('mensajeAccion').innerHTML = 'Texto Desencriptado'
     msjEntrada = document.getElementById('cajaInput').value;
-    textDesencriptado = msjEntrada
-    .replace(/enter/g, "e")
-    .replace(/imes/g, "i")
-    .replace(/ai/g, "a")
-    .replace(/ober/g, "o")
-    .replace(/ufat/g, "u");
-    
-    document.getElementById('cajaOutput').value = textDesencriptado;
-    mostrarResultados();
+    const infoSpan = document.querySelector('.encriptador__input__info span');
+
+    if (!validarTexto(msjEntrada)) {
+        infoSpan.classList.add('error');
+        setTimeout(() => {
+            infoSpan.classList.remove('error');
+        }, 3000);
+
+        return;
+
+    } else {
+        textDesencriptado = msjEntrada
+            .replace(/enter/g, "e")
+            .replace(/imes/g, "i")
+            .replace(/ai/g, "a")
+            .replace(/ober/g, "o")
+            .replace(/ufat/g, "u");
+
+        document.getElementById('cajaOutput').value = textDesencriptado;
+        mostrarResultados();
+    }
 }
 
 function validarTexto(texto) {

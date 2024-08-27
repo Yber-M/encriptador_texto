@@ -91,6 +91,19 @@ body {
     color: #ffffff88;
 }
 
+.encriptador__input__info .error {
+    color: red;
+    font-weight: bold;
+    animation: blink 0.5s step-end infinite alternate;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
 .encriptador__input__botones {
     display: flex;
     justify-content: space-between;
