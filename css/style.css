@@ -8,6 +8,16 @@
     box-sizing: border-box;
 }
 
+#videoFondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el fondo */
+    z-index: -1; /* Envía el video al fondo, detrás del contenido */
+    filter: brightness(50%); /* Opcional: oscurece el video para mejorar la legibilidad del texto */
+}
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #282c34;
@@ -92,7 +102,7 @@ body {
 }
 
 .encriptador__input__info .error {
-    color: red;
+    color: red; 
     font-weight: bold;
     animation: blink 0.5s step-end infinite alternate;
 }
