@@ -257,3 +257,56 @@ footer {
         font-size: 2.5rem;
     }
 }
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+    .header img {
+        width: 80px;
+    }
+
+    .encriptador {
+        max-width: 90%;
+        margin-top: 0.5rem;
+        flex-direction: column;
+    }
+
+    .encriptador__input,
+    .encriptador__output {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .encriptador__input__botones,
+    .encriptador__output__caja {
+        width: 100%; /* Asegura que los botones ocupen todo el ancho */
+    }
+    .encriptador__output__caja input[type="button"] {
+        margin-bottom: -3rem;
+    }
+    .encriptador__input__botones input[type="button"] {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto en los botones */
+        padding: 0.5rem;
+    }
+
+    .encriptador__output__caja textarea {
+        width: 100%;
+        margin-top: -42px;
+    }
+
+    .encriptador__output__hidden img {
+        margin-top: -6rem;
+    }
+
+    .encriptador__input__info span{
+        font-size: 1rem;
+    }
+    #mensajeAccion {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+}
