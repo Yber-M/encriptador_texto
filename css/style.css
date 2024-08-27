@@ -287,6 +287,10 @@ footer {
         width: 80px;
     }
 
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
     .encriptador {
         max-width: 90%;
         margin-top: 2rem;
